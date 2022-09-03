@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+/*
+font-family: 'Open Sans', sans-serif; (400)
+font-family: 'Poppins', sans-serif; (400-600)
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: hsl(257, 40%, 49%);
+    color: white;
+    background-image: url("images\bg-desktop.svg");
+}
+
+.mobile_bg {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.desktop_bg {
+    display: none;
+}
+
+
+form {
+    padding: 35px 35px 0 35px;
+}
+
+form .logo {
+    width: 125px;
+}
+
+
+.content .illustration {
+    width: 100%;
+}
+
+.illustration img {
+    width: 100%;
+    margin: 50px 0;
+}
+
+
+.content_txt {
+    text-align: center;
+}
+
+.content_txt .title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.content_txt .main_p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin: 20px 0 25px 0;
+}
+
+.content input[type="button"] {
+    background: wight;
+    outline: 0;
+    border: 0;
+    color: hsl(257, 40%, 49%);
+    border-radius: 500px;
+    padding: 10px 70px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.352);
+    transition: 0.2s linear;
+}
+
+.content input[type="button"]:hover {
+    background: hsl(300, 69%, 71%);
+    color: white;
+}
+
+
+footer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer img {
+    width: 30px;
+    border: 1px solid White;
+    padding: 5px;
+    border-radius: 50%;
+    filter: contrast(100);
+    transition: 0.2s linear;
+}
+
+footer img:hover {
+    filter: contrast(1) saturate(2);
+    border: 1px solid hsl(300, 69%, 71%);
+}
+
+@media only screen and (min-width: 769px) {
+
+    form {
+        padding: 40px 50px 0 50px;
+        height: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 10% 80% 10%;
+    }
+
+    .desktop_bg {
+        display: inline;
+        position: fixed;
+        z-index: -1;
+        opacity: 1;
+        
+    }
+    
+    .mobile_bg {
+        width: 0%;
+        height: 0;
+        position: absolute;
+        opacity: 0;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 57.5% 37.5%;
+        align-items: center;
+        align-content: center;
+        height: 100%;
+        grid-gap: 5%;
+    }
+
+    .content_txt {
+        text-align: left;
+    }
+
+    footer {
+        width: 100%;
+        justify-content: flex-end;
+        align-items: Center;
+        margin-top: 0px;
+    }
+}
+
+@media  only screen and (ma-width: 769px) {
+    .content_txt .title {
+        font-size: 23px;
+    }
+}
