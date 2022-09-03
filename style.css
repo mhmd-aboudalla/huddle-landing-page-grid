@@ -28,7 +28,7 @@ body {
 
 
 form {
-    padding: 35px 35px 0 35px;
+    padding: 35px;
 }
 
 form .logo {
@@ -118,10 +118,7 @@ footer img:hover {
     }
     
     .mobile_bg {
-        width: 0%;
-        height: 0;
-        position: absolute;
-        opacity: 0;
+        display: none;
     }
 
     .content {
